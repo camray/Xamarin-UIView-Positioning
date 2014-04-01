@@ -6,28 +6,28 @@ namespace MonoTouch.UIKit
 {
   public static class UIViewExtensions
   {
-    public static void X(this UIView view, int x)
+    public static void X(this UIView view, float x)
     {
       RectangleF r = view.Frame;
       r.X = x;
       view.Frame = r;
     }
 
-    public static void Y(this UIView view, int y)
+    public static void Y(this UIView view, float y)
     {
       RectangleF r = view.Frame;
       r.Y = y;
       view.Frame = r;
     }
 
-    public static void Width(this UIView view, int width)
+    public static void Width(this UIView view, float width)
     {
       RectangleF r = view.Frame;
       r.Width = width;
       view.Frame = r;
     }
 
-    public static void Height(this UIView view, int height)
+    public static void Height(this UIView view, float height)
     {
       RectangleF r = view.Frame;
       r.Height = height;
@@ -42,34 +42,34 @@ namespace MonoTouch.UIKit
       view.Frame = r;
     }
 
-    public static void Size(this UIView view, PointF dim)
+    public static void Size(this UIView view, SizeF dim)
     {
       RectangleF r = view.Frame;
-      r.Width = dim.X;
-      r.Height = dim.Y;
+      r.Width = dim.Width;
+      r.Height = dim.Height;
       view.Frame = r;
     }
 
-    public static void Right(this UIView view, int right)
+    public static void Right(this UIView view, float right)
     {
       RectangleF r = view.Frame;
       r.X = right - view.Frame.Width;
       view.Frame = r;
     }
 
-    public static void Bottom(this UIView view, int bottom)
+    public static void Bottom(this UIView view, float bottom)
     {
       RectangleF r = view.Frame;
       r.Y = bottom - view.Frame.Height;
       view.Frame = r;
     }
 
-    public static void CenterY(this UIView view, int y)
+    public static void CenterY(this UIView view, float y)
     {
       view.Center = new PointF (view.Center.X, y);
     }
 
-    public static void CenterX(this UIView view, int x)
+    public static void CenterX(this UIView view, float x)
     {
       view.Center = new PointF (x, view.Center.Y);
     }
