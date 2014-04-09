@@ -31,7 +31,7 @@ x.Origin(new PointF(10, 15)); // moves to x = 10, y = 15
 Console.WriteLine(x.Origin().ToString());
 // PointF 10, 15
 
-x.Size(new PointF(10, 15)); // Sets width = 10, height = 15
+x.Size(new SizeF(10, 15)); // Sets width = 10, height = 15
 Console.WriteLine(x.Size().ToString());
 // PointF 10, 15
 
